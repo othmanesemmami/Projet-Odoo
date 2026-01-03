@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Séquence pour les numéros de réservation -->
+    <record id="sequence_reservation" model="ir.sequence">
+        <field name="name">Séquence Réservation</field>
+        <field name="code">gestion_reservation.reservation</field>
+        <field name="prefix">RES-</field>
+        <field name="padding">5</field>
+        <field name="number_increment">1</field>
+        <field name="use_date_range">False</field>
+    </record>
+</odoo>

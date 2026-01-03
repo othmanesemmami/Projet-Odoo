@@ -1,0 +1,21 @@
+{
+    "name": "Gestion Réservation (Réservation équipement)",
+    "version": "1.0.0",
+    "summary": "Gérer les réservations d'équipements (créneaux, états, contraintes)",
+    "description": "Module pédagogique pour gérer des équipements et leurs réservations. Anti-chevauchement, calcul de durée, vues calendrier.",
+    "author": "TonNom",
+    "category": "Services/Reservation",
+    "depends": ["base", "mail", "calendar"],
+    "data": [
+        "security/security.xml",
+        "security/ir.model.access.csv",
+        "data/sequence_data.xml",
+        "views/equipment_views.xml",
+        "views/reservation_views.xml",
+        "views/menus_actions.xml",
+        "data/demo_data.xml",
+    ],
+    "installable": True,
+    "application": True,
+    "license": "LGPL-3",
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- addons/gestion_reservation/security/security.xml -->
+<odoo>
+  <data noupdate="1">
+    <record id="module_category_gestion_reservation" model="ir.module.category">
+      <field name="name">Gestion Réservation</field>
+      <field name="description">Gérer les réservations d'équipements</field>
+      <field name="sequence">10</field>
+    </record>
+
+    <record id="group_gestion_reservation_user" model="res.groups">
+      <field name="name">Utilisateur Réservation</field>
+      <field name="category_id" ref="module_category_gestion_reservation"/>
+      <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="group_gestion_reservation_manager" model="res.groups">
+      <field name="name">Manager Réservation</field>
+      <field name="implied_ids" eval="[(4, ref('group_gestion_reservation_user'))]"/>
+      <field name="category_id" ref="module_category_gestion_reservation"/>
+    </record>
+  </data>
+</odoo>

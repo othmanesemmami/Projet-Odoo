@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- addons/gestion_reservation/data/demo_data.xml -->
+<odoo>
+  <record id="eq_projector" model="gestion_reservation.equipment">
+    <field name="name">Projecteur</field>
+    <field name="code">PRJ-001</field>
+    <field name="capacity">1</field>
+  </record>
+
+  <record id="eq_meeting_room" model="gestion_reservation.equipment">
+    <field name="name">Salle de réunion A</field>
+    <field name="code">SALA-01</field>
+    <field name="capacity">20</field>
+  </record>
+
+  <record id="res_demo1" model="gestion_reservation.reservation">
+    <field name="name">RES-0001</field>
+    <field name="equipment_id" ref="eq_projector"/>
+    <field name="start_datetime">2025-01-10 09:00:00</field>
+    <field name="end_datetime">2025-01-10 11:00:00</field>
+    <field name="state">confirmed</field>
+  </record>
+</odoo>

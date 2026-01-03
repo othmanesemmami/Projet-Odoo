@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- addons/gestion_reservation/views/menus_actions.xml -->
+<odoo>
+  <record id="action_equipment" model="ir.actions.act_window">
+    <field name="name">Équipements</field>
+    <field name="res_model">gestion_reservation.equipment</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <record id="action_reservation" model="ir.actions.act_window">
+    <field name="name">Réservations</field>
+    <field name="res_model">gestion_reservation.reservation</field>
+    <field name="view_mode">tree,calendar,form</field>
+    <field name="help">Gérer les réservations d'équipements.</field>
+  </record>
+
+  <menuitem id="menu_gestion_reservation_root" 
+            name="Gestion Réservation" 
+            web_icon="base,static/description/icon.png"
+            groups="base.group_user"
+            sequence="10"/>
+
+  <menuitem id="menu_gestion_equipment" name="Équipements" parent="menu_gestion_reservation_root" action="action_equipment" sequence="1"/>
+  <menuitem id="menu_gestion_reservation" name="Réservations" parent="menu_gestion_reservation_root" action="action_reservation" sequence="2"/>
+</odoo>
